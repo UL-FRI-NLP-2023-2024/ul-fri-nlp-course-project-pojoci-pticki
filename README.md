@@ -1,3 +1,12 @@
-# Natural language processing course 2023/24: `Put name of your project here`
+# Natural language processing course 2023/24: `Qualitative Research on Discussions - text categorization`
 
-Please, organize README and the whole structure of the repository to be self-contained and reproducible.
+<details>
+<summary>This repository consists of these main folders:</summary>
+
+- src directory (all source code and methods)
+- data directory (text files and other data files)
+- notebooks directory (jupyter notebooks - run files)
+- report.pdf (Project report)
+- requirements.txt (all dependencies listed)
+
+</details>
