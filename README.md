@@ -7,3 +7,10 @@ This repository consists of these main folders:
 - notebooks directory (jupyter notebooks - run files)
 - report directory (Here you can find report.pdf)
 - requirements.txt (all dependencies listed)
+
+Setup local environment with venv:
+- py -m venv .venv
+- .venv\Scripts\activate
+- py -m pip install --upgrade pip
+- py -m pip --version
+- py -m pip install -r requirements.txt
