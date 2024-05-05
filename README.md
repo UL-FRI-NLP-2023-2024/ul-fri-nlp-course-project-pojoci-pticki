@@ -8,7 +8,7 @@ This repository consists of these main folders:
 - report directory (Here you can find report.pdf)
 - requirements.txt (all dependencies listed)
 
-Setup local environment with venv:
+Setup local environment with venv (WINDOWS):
 - py -m venv .venv
 - .venv\Scripts\activate
 - py -m pip install --upgrade pip
