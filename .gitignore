@@ -131,3 +131,4 @@ dmypy.json
 pyvenv.cfg
 .venv
 Scripts
+llama
