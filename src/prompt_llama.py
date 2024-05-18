@@ -2,9 +2,26 @@ import torch
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 from huggingface_hub import login
 import os
-import logging
+#import logging
+import pandas as pd
 
-logging.basicConfig(level=logging.INFO)
+#logging.basicConfig(level=logging.INFO)
+
+a=os.getcwd()
+df = pd.read_csv('./data/final_data.csv')
+df = df.dropna()
+print(df.iloc[:, 1].unique())
+
+with open('./prompts/text_categorization_prompt_zeroshot.md', 'r', encoding='utf-8') as file:
+    prompt = file.read()
+
+# create prompts
+prompts = []
+for index, row in df.iterrows():
+    input_text = str(row['Message'])
+    prompts.append(prompt.format(input=input_text))
+    
+
 
 # Log in to Hugging Face
 api_token = "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"
