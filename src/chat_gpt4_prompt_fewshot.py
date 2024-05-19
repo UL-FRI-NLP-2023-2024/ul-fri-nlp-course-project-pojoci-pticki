@@ -13,7 +13,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def get_chatgpt_response(prompt):
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0125",  # Use the appropriate model
+        model="gpt-4-turbo",  # Use the appropriate model
         messages=[
             {"role": "system", "content": "You are an academic researcher specializing in linguistics."},
             {"role": "user", "content": prompt}
@@ -80,7 +80,7 @@ with open('./prompts/text_categorization_prompt_fewshot.md', 'r', encoding='utf-
 
 fewshot_examples, test_set = sample_and_concatenate(df, valid_categories)
 
-with open('./data/chat_gpt3.5_fewshot_categories.txt', 'w', encoding='utf-8') as file_cat:
+with open('./data/chat_gpt4_fewshot_categories.txt', 'w', encoding='utf-8') as file_cat:
     categories = []
     ix = 0
     for index, row in test_set.iterrows():
@@ -90,7 +90,7 @@ with open('./data/chat_gpt3.5_fewshot_categories.txt', 'w', encoding='utf-8') as
         category = extract_info(response)
         file_cat.write(str(category) + '\n')
         print(category, ix/len(test_set))
-        time.sleep(0.5)
+        time.sleep(5.5)
         ix += 1
 
 
